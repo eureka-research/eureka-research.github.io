@@ -649,6 +649,23 @@
                     onclick="populateDemo(this);">
             </div>
         </div>
+        <p></p>
+        <div class="row border rounded" style="padding-top:10px; padding-bottom:10px;">
+            <div class="col-md-6">
+                <video width="100%" height="100%" id="demo-video" autoplay loop muted webkit-playsinline playsinline onclick="setAttribute('controls', 'true');">
+                    <source id="expandedImg" src="videos/placeholder.mp4" type="video/mp4">
+                </video>
+
+            </div>
+            <div class="col-md-6">
+                <div id="imgtext">Prompt text in gray.</div>
+                <div>
+                    <pre><code class="language-python" id="answer">L2R response shown within code block.</code></pre>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
 </section>
