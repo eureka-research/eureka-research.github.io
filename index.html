@@ -66,7 +66,7 @@
                     </h3> -->
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
-                <a target="_blank" href="https://www.seas.upenn.edu/~jasonyma/">Jason&#160;Ma</a><sup>1 2</sup>,
+                <a target="_blank" href="https://www.seas.upenn.edu/~jasonyma/">Yecheng Jason&#160;Ma</a><sup>1 2</sup>,
                 <a target="_blank" href="https://www.seas.upenn.edu/~wjhliang/">William&#160;Liang</a><sup>1</sup>,
 
                 <a target="_blank" href="https://guanzhi.me/">Guanzhi&#160;Wang</a><sup>3</sup>,
@@ -88,19 +88,19 @@
                         <span class="author-block"><sup>4</sup>UT Austin</span>
                     </div>
 
-                    <div class="is-size-5 publication-authors">
+                    <!-- <div class="is-size-5 publication-authors">
                         <span class="author-block">Work done during the first author's internship at NVIDIA</span>
-                    </div>
+                    </div> -->
 
-                    <div class="is-size-5 publication-authors">
+                    <!-- <div class="is-size-5 publication-authors">
                         <span class="author-block"><sup>&dagger;</sup>Equal Contribution</span>
                         <span class="author-block"><sup>&#8225;</sup>Equal Advising </span>
-                    </div>
+                    </div> -->
 
                     <div class="column has-text-centered">
                         <div class="publication-links">
                             <!-- TODO PDF Link. -->
-                            <span class="link-block">
+                            <!-- <span class="link-block">
                 <a target="_blank" href="https://arxiv.org/abs/2210.03094"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -118,9 +118,9 @@
                   </span>
                   <span>PDF</span>
                 </a>
-              </span>
-                            <!-- Code Link. -->
-                            <span class="link-block">
+              </span> -->
+
+              <!-- <span class="link-block">
                 <a target="_blank" href="https://github.com/vimalabs/VIMA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -148,7 +148,7 @@
                       <i class="fas fa-database"></i>
                   </span>
                   <span>Dataset</span>
-                </a>
+                </a> -->
               </span>
                         </div>
 
@@ -281,20 +281,13 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p style="font-size: 125%">
-                        Prompt-based learning has emerged as a successful paradigm in natural language processing, where
-                        a single general-purpose language model can be instructed to perform any task specified by input
-                        prompts. Yet task specification in robotics comes in various forms, such as imitating one-shot
-                        demonstrations, following language instructions, and reaching visual goals. They are often
-                        considered different tasks and tackled by specialized models. We show that a wide spectrum of
-                        robot manipulation tasks can be expressed with <i>multimodal prompts</i>, interleaving textual
-                        and visual tokens. Accordingly, we develop a new simulation benchmark that consists of thousands
-                        of procedurally-generated tabletop tasks with multimodal prompts, 600K+ expert trajectories for
-                        imitation learning, and a four-level evaluation protocol for systematic generalization. We
-                        design a transformer-based robot agent, VIMA, that processes these prompts and outputs motor
-                        actions autoregressively. VIMA features a recipe that achieves strong model scalability and data
-                        efficiency. It outperforms alternative designs in the hardest zero-shot generalization setting
-                        by up to 2.9x task success rate given the same training data. With 10x less training data, VIMA
-                        still performs 2.7x better than the best competing variant.
+                        Large Language Models (LLMs) have excelled as high-level semantic planners for sequential decision-making tasks, but how to use them to learn complex low-level manipulation tasks, such as dexterous pen spinning, remains an open problem.
+                        We bridge this fundamental gap and present Eureka, a <b>human-level</b> reward design algorithm powered by large language models for reinforcement learning. 
+                        Eureka exploits the remarkable zero-shot generation, code-writing, and in-context improvement capabilities of state-of-the-art LLMs, such as GPT-4, to perform in-context evolutionary optimization over reward code; 
+                        the resulting rewards can then be used to acquire complex skills via reinforcement learning. Without any task-specific prompting or pre-defined reward templates, Eureka generates reward functions that outperform expert human-engineered rewards on
+                        <b>83%</b> of the tasks in a diverse suite of 29 open-sourced RL environments that include 10 distinct robot morphologies, leading to an average normalized improvement of <b>54%</b>.
+                        The generality of Eureka enables a new type of reinforcement learning from human feedback (RLHF), readily incorporating human oversight to in-context improve the quality and the safety of the generated rewards. 
+                        Finally, using Eureka rewards in a curriculum learning setting, we demonstrate for the first time a simulated 5-finger shadow hand capable of performing pen spinning tricks, adeptly rotating a pen in circles at human speed. 
                     </p>
                 </div>
             </div>
@@ -302,7 +295,7 @@
     </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
             <div class="rows is-centered ">
@@ -315,10 +308,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!--Model-->
-<section class="section">
+<!-- <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
             <div class="rows is-centered ">
@@ -336,7 +329,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
 
 
 <!-- <section class="section">
@@ -570,7 +563,7 @@
                     <h2 class="title is-3"><span
                             class="dvima">Experiments</span></h2>
 
-                    <p style="font-size: 125%">
+                    <!-- <p style="font-size: 125%">
                         We answer three main questions during experiments:
                     <ul style="font-size: 125%; padding-left: 5%">
                         <li>
@@ -626,33 +619,66 @@
                     <br>
                     <span style="font-size: 110%">
                         <span style="font-weight: bold">Ablation on prompt conditioning.</span> We compare our method (<i>xattn</i>: cross-attention prompt conditioning) with a vanilla transformer decoder (<i>gpt-decoder</i>) across different model sizes. Cross-attention is especially helpful in low-parameter regime and for harder generalization tasks.
-                    </span>
+                    </span> -->
                 </div>
             </div>
 
         </div>
 
         <div class="rows">
-            <div class="col-md-4 col-sm-4 col-xs-4">
+            <!-- <div class="col-md-4 col-sm-4 col-xs-4">
                 <img src="videos/sim/bowl2.png" width="100%"
                     alt=" User instruction: Flp the bowl. [sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'bowl')\\set_obj_orientation_reward('bowl', np.deg2rad(180))\\execute_plan(2)"
                     onclick="populateDemo(this);">
-            </div>
+            </div> -->
             <div class="col-md-4 col-sm-4 col-xs-4">
-                <img src="videos/sim/open_faucet.png" width="100%"
-                    alt="User instruction: Turn on the faucet.[sep]import numpy as np\\reset_reward() # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'faucet_handle')\\set_joint_fraction_reward('faucet', 1) # Open the faucet\\execute_plan(4)"
+                <img src="videos/sim/pen_spinning.png" width="50%"
+                    alt='Task: Pen Spinning. Eureka reward:
+                    [sep]
+from typing import Tuple, Dict
+from torch import Tensor
+@torch.jit.script
+def compute_reward(object_rot: torch.Tensor, goal_rot: torch.Tensor, object_angvel: torch.Tensor, object_pos: torch.Tensor, fingertip_pos: torch.Tensor) -> Tuple[torch.Tensor, Dict[str, torch.Tensor]]:
+    # angular_velocity = object_angvel[:, 2]
+    # total_reward = angular_velocity
+
+    # Rotation reward
+    rot_diff = torch.abs(torch.sum(object_rot * goal_rot, dim=1) - 1) / 2
+    rotation_reward_temp = 20.0
+    rotation_reward = torch.exp(-rotation_reward_temp * rot_diff)
+
+    # Angular velocity penalty
+    angvel_norm = torch.norm(object_angvel, dim=1)
+    angvel_threshold = 2.0
+    angvel_penalty_temp = 2.0
+    angular_velocity_penalty = torch.where(angvel_norm > angvel_threshold, torch.exp(-angvel_penalty_temp * (angvel_norm - angvel_threshold)), torch.zeros_like(angvel_norm))
+
+    # Distance reward
+    min_distance_temp = 10.0
+    min_distance = torch.min(torch.norm(fingertip_pos - object_pos[:, None], dim=2), dim=1).values
+    uncapped_distance_reward = torch.exp(-min_distance_temp * min_distance)
+    distance_reward = torch.clamp(uncapped_distance_reward, 0.0, 1.0)
+
+    total_reward = rotation_reward - angular_velocity_penalty + distance_reward
+    reward_components = {
+        "rotation_reward": rotation_reward,
+        "angular_velocity_penalty": angular_velocity_penalty,
+        "distance_reward": distance_reward
+    }
+    
+    return total_reward, reward_components'
                     onclick="populateDemo(this);">
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-4">
+            <!-- <div class="col-md-4 col-sm-4 col-xs-4">
                 <img src="videos/sim/upright_box.png" width="100%"
                     alt="User instruction: Make the box upright.[sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'box')\\set_obj_orientation_reward('box', np.deg2rad(90))\\execute_plan()"
                     onclick="populateDemo(this);">
-            </div>
+            </div> -->
         </div>
         <p></p>
         <div class="row border rounded" style="padding-top:10px; padding-bottom:10px;">
             <div class="col-md-6">
-                <video width="100%" height="100%" id="demo-video" autoplay loop muted webkit-playsinline playsinline onclick="setAttribute('controls', 'true');">
+                <video width="50%" height="50%" id="demo-video" autoplay loop muted webkit-playsinline playsinline onclick="setAttribute('controls', 'true');">
                     <source id="expandedImg" src="videos/placeholder.mp4" type="video/mp4">
                 </video>
 
@@ -660,7 +686,7 @@
             <div class="col-md-6">
                 <div id="imgtext">Prompt text in gray.</div>
                 <div>
-                    <pre><code class="language-python" id="answer">L2R response shown within code block.</code></pre>
+                    <pre><code class="language-python" id="answer">Eureka response shown within code block.</code></pre>
                 </div>
 
             </div>
@@ -671,7 +697,7 @@
 </section>
 
 <!--Conclusion-->
-<section class="section">
+<!-- <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
             <div class="rows is-centered ">
@@ -695,10 +721,10 @@
 
         </div>
     </div>
-</section>
+</section> -->
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
     <div class="container is-max-widescreen content">
         <h2 class="title">BibTeX</h2>
         <pre><code>@inproceedings{jiang2023vima,
@@ -708,7 +734,7 @@
   year      = {2023}
 }</code></pre>
     </div>
-</section>
+</section> -->
 
 <footer class="footer">
     <div class="container">
@@ -717,8 +743,10 @@
                 <div class="content has-text-centered">
                     <p>
                         Website template borrowed from <a
-                            href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
-                            href="https://github.com/cliport/cliport.github.io">CLIPort</a>.
+                            href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>, <a
+                            href="https://github.com/cliport/cliport.github.io">CLIPort</a>, 
+                            <a
+                            href="https://vimalabs.github.io/">VIMA</a>.
                     </p>
                 </div>
             </div>
