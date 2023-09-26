@@ -67,16 +67,16 @@
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
                 <a target="_blank" href="https://www.seas.upenn.edu/~jasonyma/">Jason&#160;Ma</a><sup>1 2</sup>,
-                <a target="_blank" href="https://www.seas.upenn.edu/~wjhliang/">William&#160;Liang</a><sup>1;</sup>,
+                <a target="_blank" href="https://www.seas.upenn.edu/~wjhliang/">William&#160;Liang</a><sup>1</sup>,
 
-                <a target="_blank" href="https://guanzhi.me/">Guanzhi&#160;Wang</a><sup>3;</sup>,
-                <a target="_blank" href="https://ai.stanford.edu/~dahuang/">De-An&#160;Huang</a><sup>2;</sup>,
+                <a target="_blank" href="https://guanzhi.me/">Guanzhi&#160;Wang</a><sup>3</sup>,
+                <a target="_blank" href="https://ai.stanford.edu/~dahuang/">De-An&#160;Huang</a><sup>2</sup>,
                 <br>
-                <a target="_blank" href="https://obastani.github.io/">Osbert&#160;Bastani</a><sup>1;</sup>,
-                <a target="_blank" href="https://www.seas.upenn.edu/~dineshj/">Dinesh&#160;Jayaraman</a><sup>1;</sup>,
+                <a target="_blank" href="https://obastani.github.io/">Osbert&#160;Bastani</a><sup>1</sup>,
+                <a target="_blank" href="https://www.seas.upenn.edu/~dineshj/">Dinesh&#160;Jayaraman</a><sup>1</sup>,
 
-                <a target="_blank" href="https://www.cs.utexas.edu/~yukez/">Yuke&#160;Zhu</a><sup>3 4;</sup>,
-                <a target="_blank" href="https://jimfan.me/">Linxi&#160;"Jim"&#160;Fan</a><sup>2;</sup>
+                <a target="_blank" href="https://www.cs.utexas.edu/~yukez/">Yuke&#160;Zhu</a><sup>3 4</sup>,
+                <a target="_blank" href="https://jimfan.me/">Linxi&#160;"Jim"&#160;Fan</a><sup>2</sup>
                 <a target="_blank" href="http://tensorlab.cms.caltech.edu/users/anima/">Anima&#160;Anandkumar</a><sup>2 3</sup>,
             </span>
                     </div>
@@ -159,7 +159,7 @@
     </div>
 </section>
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
     <div class="hero-body">
         <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
@@ -270,7 +270,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -338,7 +338,8 @@
     </div>
 </section>
 
-<section class="section">
+
+<!-- <section class="section">
     <div class="container is-max-widescreen">
 
         <div class="rows">
@@ -564,7 +565,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
 
 <!--Experiments-->
 <section class="section">
@@ -637,6 +638,26 @@
 
         </div>
     </div>
+
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <img src="videos/sim/bowl2.png" width="100%"
+                alt=" User instruction: Flp the bowl. [sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'bowl')\\set_obj_orientation_reward('bowl', np.deg2rad(180))\\execute_plan(2)"
+                onclick="populateDemo(this);">
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <img src="videos/sim/open_faucet.png" width="100%"
+                alt="User instruction: Turn on the faucet.[sep]import numpy as np\\reset_reward() # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'faucet_handle')\\set_joint_fraction_reward('faucet', 1) # Open the faucet\\execute_plan(4)"
+                onclick="populateDemo(this);">
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <img src="videos/sim/upright_box.png" width="100%"
+                alt="User instruction: Make the box upright.[sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'box')\\set_obj_orientation_reward('box', np.deg2rad(90))\\execute_plan()"
+                onclick="populateDemo(this);">
+        </div>
+    </div>
+    
 </section>
 
 <!--Conclusion-->
@@ -696,4 +717,58 @@
 </footer>
 
 </body>
+
+<script>
+
+    timeoutIds = [];
+
+    function populateDemo(imgs) {
+        // Get the expanded image
+        var expandImg = document.getElementById("expandedImg");
+        // Get the image text
+        var imgText = document.getElementById("imgtext");
+        var answer = document.getElementById("answer");
+
+        // Use the same src in the expanded image as the image being clicked on from the grid
+        expandImg.src = imgs.src.replace(".png", ".mp4");
+        var video = document.getElementById('demo-video');
+        // or video = $('.video-selector')[0];
+        video.pause()
+        video.load();
+        video.play();
+        video.removeAttribute('controls');
+        
+        console.log(expandImg.src);
+        // Use the value of the alt attribute of the clickable image as text inside the expanded image
+        var qa = imgs.alt.split("[sep]");
+        imgText.innerHTML = qa[0];
+        answer.innerHTML = "";
+        // Show the container element (hidden with CSS)
+        expandImg.parentElement.style.display = "block";
+        for (timeoutId of timeoutIds) {
+            clearTimeout(timeoutId);
+        }
+        typeWriter(qa[1], 0, qa[0]);
+    }
+
+    function typeWriter(txt, i, q) {
+        var imgText = document.getElementById("imgtext");
+        if (imgText.innerHTML == q) {
+            if (i < txt.length) {
+                if (txt.charAt(i) == "\\") {
+                    answer.innerHTML += "\n";
+                    i += 1;
+                } else {
+                    answer.innerHTML += txt.charAt(i);
+                }
+                i++;
+                timeoutIds.push(setTimeout(typeWriter, 5, txt, i, q));
+            }
+            else {
+                hljs.highlightAll();
+            }
+        }
+    }
+
+</script>
 </html>
