@@ -356,7 +356,6 @@
                     <br>
 
                     <div class="columns">
-                        <!-- Simple Object Manipulation -->
                         <div class="column has-text-left">
                             <h3 class="title is-5">Simple Object Manipulation</h3>
                             <div class="select is-medium">
@@ -388,7 +387,6 @@
                             </video>
                         </div>
 
-                        <!-- Visual Goal Reaching -->
                         <div class="column has-text-left">
                             <h3 class="title is-5">Visual Goal Reaching</h3>
                             <div class="select is-medium">
@@ -424,7 +422,6 @@
 
                     <br>
                     <div class="columns">
-                        <!-- Novel Concept Grounding -->
                         <div class="column has-text-left">
                             <h3 class="title is-5">Novel Concept Grounding</h3>
                             <div class="select is-medium">
@@ -458,7 +455,6 @@
                             </video>
                         </div>
 
-                        <!-- One Shot Video Imitation -->
                         <div class="column has-text-left">
                             <h3 class="title is-5">One-shot Video Imitation</h3>
                             <div class="select is-medium">
@@ -492,7 +488,6 @@
 
                     <br>
                     <div class="columns">
-                        <!-- Visual Constraint Satisfaction -->
                         <div class="column has-text-left">
                             <h3 class="title is-5">Visual Constraint Satisfaction</h3>
                             <div class="select is-medium">
@@ -526,7 +521,6 @@
                             </video>
                         </div>
 
-                        <!-- Visual Reasoning -->
                         <div class="column has-text-left">
                             <h3 class="title is-5">Visual Reasoning</h3>
                             <div class="select is-medium">
@@ -637,27 +631,26 @@
             </div>
 
         </div>
+
+        <div class="rows">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <img src="videos/sim/bowl2.png" width="100%"
+                    alt=" User instruction: Flp the bowl. [sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'bowl')\\set_obj_orientation_reward('bowl', np.deg2rad(180))\\execute_plan(2)"
+                    onclick="populateDemo(this);">
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <img src="videos/sim/open_faucet.png" width="100%"
+                    alt="User instruction: Turn on the faucet.[sep]import numpy as np\\reset_reward() # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'faucet_handle')\\set_joint_fraction_reward('faucet', 1) # Open the faucet\\execute_plan(4)"
+                    onclick="populateDemo(this);">
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <img src="videos/sim/upright_box.png" width="100%"
+                    alt="User instruction: Make the box upright.[sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'box')\\set_obj_orientation_reward('box', np.deg2rad(90))\\execute_plan()"
+                    onclick="populateDemo(this);">
+            </div>
+        </div>
     </div>
 
-
-    <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <img src="videos/sim/bowl2.png" width="100%"
-                alt=" User instruction: Flp the bowl. [sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'bowl')\\set_obj_orientation_reward('bowl', np.deg2rad(180))\\execute_plan(2)"
-                onclick="populateDemo(this);">
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <img src="videos/sim/open_faucet.png" width="100%"
-                alt="User instruction: Turn on the faucet.[sep]import numpy as np\\reset_reward() # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'faucet_handle')\\set_joint_fraction_reward('faucet', 1) # Open the faucet\\execute_plan(4)"
-                onclick="populateDemo(this);">
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <img src="videos/sim/upright_box.png" width="100%"
-                alt="User instruction: Make the box upright.[sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'box')\\set_obj_orientation_reward('box', np.deg2rad(90))\\execute_plan()"
-                onclick="populateDemo(this);">
-        </div>
-    </div>
-    
 </section>
 
 <!--Conclusion-->
