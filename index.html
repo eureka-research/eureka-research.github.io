@@ -338,6 +338,161 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Policies</span></h2>
+                        <p style="font-size: 125%">
+                            We train policies on environments from IsaacGym (Isaac) and the Bidexterous Manipulation
+                            (Dexterity) benchmark. For each environment, Eureka performs 5 iterations with 16 samples
+                            per iteration, and we select the best policy overall. Their rollouts are visualized below.
+                        </p>
+                        <p style="font-size: 125%"></p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: AllegroHand, Eureka reward:
+                        [sep]
+                        assets/reward_functions/allegro_hand.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: Ant, Eureka reward:
+                        [sep]
+                        assets/reward_functions/ant.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: Anymal, Eureka reward:
+                        [sep]
+                        assets/reward_functions/anymal.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: BallBalance, Eureka reward:
+                        [sep]
+                        assets/reward_functions/ball_balance.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: Cartpole, Eureka reward:
+                        [sep]
+                        assets/reward_functions/cartpole.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: FrankaCabinet, Eureka reward:
+                        [sep]
+                        assets/reward_functions/franka_cabinet.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: Humanoid, Eureka reward:
+                        [sep]
+                        assets/reward_functions/humanoid.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: Quadcopter, Eureka reward:
+                        [sep]
+                        assets/reward_functions/quadcopter.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHand (and pen spinning), Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandBlockStack, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_block_stack.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandBottleCap, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_bottle_cap.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandCatchAbreast, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_catch_abreast.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandCatchOver2Underarm, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_catch_over_2_underarm.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandCatchUnderarm, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_catch_underarm.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandDoorCloseInward, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_door_close_inward.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandDoorCloseOutward, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_door_close_outward.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandDoorOpenInward, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_door_open_inward.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandDoorOpenOutward, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_door_open_outward.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandGraspAndPlace, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_grasp_and_place.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandKettle, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_kettle.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandLiftUnderarm, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_lift_underarm.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandOver, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_over.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandPen, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_pen.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandPushBlock, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_push_block.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandReorientation, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_reorientation.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandScissors, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_scissors.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandSwingCup, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_swing_cup.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandSwitch, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_switch.txt' onclick="populateDemo(this);">
+
+                        <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandTwoCatchUnderarm, Eureka reward:
+                        [sep]
+                        assets/reward_functions/shadow_hand_two_catch_underarm.txt' onclick="populateDemo(this);">
+
+                    </div>
+                </div>
+                <div class="row border rounded" style="padding-top:10px; padding-bottom:10px;">
+                    <div class="col-md-6">
+                        <video id="demo-video" style="border-radius: 5px;" autoplay loop muted
+                            webkit-playsinline playsinline onclick="setAttribute('controls', 'true');">
+                            <source id="expandedImg" src="videos/placeholder.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="imgtext">Prompt text in gray.</div>
+                <div>
+                    <pre><code class="language-python" id="answer">Eureka response shown within code block.</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
                         <h2 class="title is-3"><span class="dvima">Iterative Reward Generation</span></h2>
                         <!-- <video poster="" autoplay controls muted loop height="100%">
                             <source src="assets/videos/vima_arch_animation.mp4" type="video/mp4">
@@ -346,7 +501,7 @@
                             style="display: block; margin-left: auto; margin-right: auto; max-width: 60%;" />
                         <br>
                         <span style="font-size: 110%">
-                            <span style="font-weight: bold">Eureka Reward Generation.</span> EUREKA can zero-shot
+                            <span style="font-weight: bold">Eureka Reward Generation.</span> Eureka can zero-shot
                             generate executable rewards and then flexibly improve them with many distinct
                             types of free-form modification, such as (1) changing the hyperparameter of existing reward
                             components, (2)
@@ -355,6 +510,117 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Experiments</span></h2>
+                        <p style="font-size: 125%">
+                            We thoroughly evaluate Eureka on a diverse suite of robot embodiments and tasks, testing its
+                            ability
+                            to generate reward functions, solve new tasks, and incorporate various forms of human input.
+                        </p>
+                        <br>
+                        <p style="font-size: 125%">
+                            Our environments consist of 10 distinct robots and 29 tasks implemented using the
+                            IsaacGym simulator. First, we include 9 original environments from
+                            IsaacGym (Isaac), covering a diverse set of robot morphologies from quadruped, bipedal,
+                            quadrotor,
+                            cobot arm, to dexterous hands. In addition to coverage over robot form factors, we ensure
+                            depth in our
+                            evaluation by including all 20 tasks from the Bidexterous Manipulation (Dexterity)
+                            benchmark.
+                            Dexterity contains 20 complex bi-manual tasks that require a pair of Shadow Hands to
+                            solve a wide range of complex manipulation skills, ranging from object handover to rotating
+                            a cup by
+                            180 degrees
+                        </p>
+                        <br>
+                        <br>
+
+                        <h3 class="title is-4"><span class="dvima">Evaluation Results</span></h3>
+
+                        <img src="assets/images/eureka_bar_chart.png" class="interpolation-image" alt=""
+                            style="display: block; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 110%">
+                            <span style="font-weight: bold">TODO</span> Eureka outperforms Human and L2R across all
+                            tasks. In particular, Eureka realizes much greater gains on high-dimensional dexterity
+                            environments.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+
+                        <img src="assets/images/eureka_improvement.png" class="interpolation-image" alt=""
+                            style="display: block; width: 60%; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 110%">
+                            <span style="font-weight: bold">TODO</span> Eureka progressively produces better rewards via
+                            in- context evolutionary reward search.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+
+                        <h3 class="title is-4"><span class="dvima">Comparison with Human Rewards</span></h3>
+                        <br>
+
+                        <img src="assets/images/isaac_eureka_correlation.png" class="interpolation-image" alt=""
+                            style="display: block; width: 40%; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 110%">
+                            <span style="font-weight: bold">TODO</span> Eureka generates novel rewards.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+
+                        <h3 class="title is-4"><span class="dvima">Curriculum Learning</span></h3>
+                        <br>
+
+                        <img src="assets/images/eureka_pen_spinning.png" class="interpolation-image" alt=""
+                            style="display: block; width: 40%; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 110%">
+                            <span style="font-weight: bold">TODO</span> Eureka can be flexibly combined with curriculum
+                            learning to acquire complex dexterous skills.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+
+                        <h3 class="title is-4"><span class="dvima">Eureka from Human Feedback</span></h3>
+                        <br>
+
+                        <img src="assets/images/bidex_reward_assistant.png" class="interpolation-image" alt=""
+                            style="display: block; width: 80%; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 110%">
+                            <span style="font-weight: bold">TODO</span> Eureka effectively improves and benefits from
+                            human reward initialization.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+
+                        <img src="assets/images/eureka_rlhf.png" class="interpolation-image" alt=""
+                            style="display: block; width: 50%; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 110%">
+                            <span style="font-weight: bold">TODO</span> Eureka can incorporate human reward reflection
+                            to modify rewards that induce safer and more human-aligned behavior.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -583,14 +849,14 @@
 </section> -->
 
     <!--Experiments-->
-    <section class="section">
+    <!-- <section class="section">
         <div class="container is-max-widescreen">
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Experiments</span></h2>
+                        <h2 class="title is-3"><span class="dvima">Experiments</span></h2> -->
 
-                        <!-- <p style="font-size: 125%">
+    <!-- <p style="font-size: 125%">
                         We answer three main questions during experiments:
                     <ul style="font-size: 125%; padding-left: 5%">
                         <li>
@@ -647,141 +913,29 @@
                     <span style="font-size: 110%">
                         <span style="font-weight: bold">Ablation on prompt conditioning.</span> We compare our method (<i>xattn</i>: cross-attention prompt conditioning) with a vanilla transformer decoder (<i>gpt-decoder</i>) across different model sizes. Cross-attention is especially helpful in low-parameter regime and for harder generalization tasks.
                     </span> -->
-                    </div>
+    <!-- </div>
                 </div>
 
             </div>
 
-            <div class="rows">
-                <!-- <div class="col-md-4 col-sm-4 col-xs-4">
+            <div class="rows"> -->
+    <!-- <div class="col-md-4 col-sm-4 col-xs-4">
                 <img src="videos/sim/bowl2.png" width="100%"
                     alt=" User instruction: Flp the bowl. [sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'bowl')\\set_obj_orientation_reward('bowl', np.deg2rad(180))\\execute_plan(2)"
                     onclick="populateDemo(this);">
             </div> -->
-                <div class="col-md-4 col-sm-4 col-xs-4">
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: AllegroHand, Eureka reward:
-                    [sep]
-                    assets/reward_functions/allegro_hand.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Ant, Eureka reward:
-                    [sep]
-                    assets/reward_functions/ant.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Anymal, Eureka reward:
-                    [sep]
-                    assets/reward_functions/anymal.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: BallBalance, Eureka reward:
-                    [sep]
-                    assets/reward_functions/ball_balance.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Cartpole, Eureka reward:
-                    [sep]
-                    assets/reward_functions/cartpole.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: FrankaCabinet, Eureka reward:
-                    [sep]
-                    assets/reward_functions/franka_cabinet.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Humanoid, Eureka reward:
-                    [sep]
-                    assets/reward_functions/humanoid.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Quadcopter, Eureka reward:
-                    [sep]
-                    assets/reward_functions/quadcopter.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHand (and pen spinning), Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandBlockStack, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_block_stack.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandBottleCap, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_bottle_cap.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandCatchAbreast, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_catch_abreast.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandCatchOver2Underarm, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_catch_over_2_underarm.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandCatchUnderarm, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_catch_underarm.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandDoorCloseInward, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_door_close_inward.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandDoorCloseOutward, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_door_close_outward.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandDoorOpenInward, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_door_open_inward.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandDoorOpenOutward, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_door_open_outward.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandGraspAndPlace, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_grasp_and_place.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandKettle, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_kettle.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandLiftUnderarm, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_lift_underarm.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandOver, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_over.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandPen, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_pen.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandPushBlock, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_push_blck.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandReorientation, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_reorientation.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandScissors, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_scissors.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandSwingCup, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_swing_cup.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandSwitch, Eureka reward:
-                    [sep]
-                    assets/reward_functions/shadow_hand_switch.txt' onclick="populateDemo(this);">
-
-                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandTwoCatchUnderarm, Eureka reward:
+    <!-- <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="videos/sim/pen_spinning.png" width="15%" style="border-radius: 5px;" alt='Task: ShadowHandTwoCatchUnderarm, Eureka reward:
                     [sep]
                     assets/reward_functions/shadow_hand_two_catch_underarm.txt' onclick="populateDemo(this);">
 
-                </div>
-                <!-- <div class="col-md-4 col-sm-4 col-xs-4">
+                </div> -->
+    <!-- <div class="col-md-4 col-sm-4 col-xs-4">
                 <img src="videos/sim/upright_box.png" width="100%"
                     alt="User instruction: Make the box upright.[sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'box')\\set_obj_orientation_reward('box', np.deg2rad(90))\\execute_plan()"
                     onclick="populateDemo(this);">
             </div> -->
-            </div>
+    <!-- </div>
             <p></p>
             <div class="row border rounded" style="padding-top:10px; padding-bottom:10px;">
                 <div class="col-md-6">
@@ -800,7 +954,7 @@
             </div>
         </div>
 
-    </section>
+    </section> -->
 
     <!--Conclusion-->
     <!-- <section class="section">
@@ -894,12 +1048,12 @@
 
         // NOTE (wliang): Modified from original to read from file instead
         fetch(qa[1])
-        .then(response => response.text())
-        .then(contents => {
-            // Call the processData function and pass the contents as an argument
-            typeWriter(contents, 0, qa[0]);
-        })
-        .catch(error => console.error('Error reading file:', error));
+            .then(response => response.text())
+            .then(contents => {
+                // Call the processData function and pass the contents as an argument
+                typeWriter(contents, 0, qa[0]);
+            })
+            .catch(error => console.error('Error reading file:', error));
     }
 
     function typeWriter(txt, i, q) {
