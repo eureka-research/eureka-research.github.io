@@ -61,7 +61,7 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">Eureka: Human-Level Reward Design with Code Large
+                        <h1 class="title is-1 publication-title">Eureka: Human-Level Reward Design via Coding Large
                             Language Models</h1>
                         <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://icml.cc/">ICML 2023</a>
                     </h3> -->
@@ -659,41 +659,122 @@
                     onclick="populateDemo(this);">
             </div> -->
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                    <img src="videos/sim/pen_spinning.png" width="50%" alt='Task: Pen Spinning. Eureka reward:
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: AllegroHand, Eureka reward:
                     [sep]
-from typing import Tuple, Dict
-from torch import Tensor
-@torch.jit.script
-def compute_reward(object_rot: torch.Tensor, goal_rot: torch.Tensor, object_angvel: torch.Tensor, object_pos: torch.Tensor, fingertip_pos: torch.Tensor) -> Tuple[torch.Tensor, Dict[str, torch.Tensor]]:
-    # angular_velocity = object_angvel[:, 2]
-    # total_reward = angular_velocity
+                    assets/reward_functions/allegro_hand.txt' onclick="populateDemo(this);">
 
-    # Rotation reward
-    rot_diff = torch.abs(torch.sum(object_rot * goal_rot, dim=1) - 1) / 2
-    rotation_reward_temp = 20.0
-    rotation_reward = torch.exp(-rotation_reward_temp * rot_diff)
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Ant, Eureka reward:
+                    [sep]
+                    assets/reward_functions/ant.txt' onclick="populateDemo(this);">
 
-    # Angular velocity penalty
-    angvel_norm = torch.norm(object_angvel, dim=1)
-    angvel_threshold = 2.0
-    angvel_penalty_temp = 2.0
-    angular_velocity_penalty = torch.where(angvel_norm > angvel_threshold, torch.exp(-angvel_penalty_temp * (angvel_norm - angvel_threshold)), torch.zeros_like(angvel_norm))
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Anymal, Eureka reward:
+                    [sep]
+                    assets/reward_functions/anymal.txt' onclick="populateDemo(this);">
 
-    # Distance reward
-    min_distance_temp = 10.0
-    min_distance = torch.min(torch.norm(fingertip_pos - object_pos[:, None], dim=2), dim=1).values
-    uncapped_distance_reward = torch.exp(-min_distance_temp * min_distance)
-    distance_reward = torch.clamp(uncapped_distance_reward, 0.0, 1.0)
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: BallBalance, Eureka reward:
+                    [sep]
+                    assets/reward_functions/ball_balance.txt' onclick="populateDemo(this);">
 
-    total_reward = rotation_reward - angular_velocity_penalty + distance_reward
-    reward_components = {
-        "rotation_reward": rotation_reward,
-        "angular_velocity_penalty": angular_velocity_penalty,
-        "distance_reward": distance_reward
-    }
-    
-    return total_reward, reward_components'
-    onclick="populateDemo(this);">
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Cartpole, Eureka reward:
+                    [sep]
+                    assets/reward_functions/cartpole.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: FrankaCabinet, Eureka reward:
+                    [sep]
+                    assets/reward_functions/franka_cabinet.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Humanoid, Eureka reward:
+                    [sep]
+                    assets/reward_functions/humanoid.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: Quadcopter, Eureka reward:
+                    [sep]
+                    assets/reward_functions/quadcopter.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHand (and pen spinning), Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandBlockStack, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_block_stack.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandBottleCap, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_bottle_cap.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandCatchAbreast, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_catch_abreast.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandCatchOver2Underarm, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_catch_over_2_underarm.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandCatchUnderarm, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_catch_underarm.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandDoorCloseInward, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_door_close_inward.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandDoorCloseOutward, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_door_close_outward.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandDoorOpenInward, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_door_open_inward.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandDoorOpenOutward, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_door_open_outward.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandGraspAndPlace, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_grasp_and_place.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandKettle, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_kettle.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandLiftUnderarm, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_lift_underarm.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandOver, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_over.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandPen, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_pen.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandPushBlock, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_push_blck.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandReorientation, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_reorientation.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandScissors, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_scissors.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandSwingCup, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_swing_cup.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandSwitch, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_switch.txt' onclick="populateDemo(this);">
+
+                    <img src="videos/sim/pen_spinning.png" width="12%" alt='Task: ShadowHandTwoCatchUnderarm, Eureka reward:
+                    [sep]
+                    assets/reward_functions/shadow_hand_two_catch_underarm.txt' onclick="populateDemo(this);">
+
                 </div>
                 <!-- <div class="col-md-4 col-sm-4 col-xs-4">
                 <img src="videos/sim/upright_box.png" width="100%"
@@ -715,9 +796,7 @@ def compute_reward(object_rot: torch.Tensor, goal_rot: torch.Tensor, object_angv
                     <div>
                         <pre><code class="language-python" id="answer">Eureka response shown within code block.</code></pre>
                     </div>
-
                 </div>
-
             </div>
         </div>
 
@@ -812,7 +891,15 @@ def compute_reward(object_rot: torch.Tensor, goal_rot: torch.Tensor, object_angv
         for (timeoutId of timeoutIds) {
             clearTimeout(timeoutId);
         }
-        typeWriter(qa[1], 0, qa[0]);
+
+        // NOTE (wliang): Modified from original to read from file instead
+        fetch(qa[1])
+        .then(response => response.text())
+        .then(contents => {
+            // Call the processData function and pass the contents as an argument
+            typeWriter(contents, 0, qa[0]);
+        })
+        .catch(error => console.error('Error reading file:', error));
     }
 
     function typeWriter(txt, i, q) {
