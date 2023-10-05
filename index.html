@@ -51,6 +51,10 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -480,7 +484,7 @@
             <div class="col-md-6">
                 <div id="imgtext">Prompt text in gray.</div>
                 <div>
-                    <pre><code class="language-python" id="answer">Eureka response shown within code block.</code></pre>
+                    <pre class="p-1"><code class="language-python" id="answer">Eureka response shown within code block.</code></pre>
                 </div>
             </div>
         </div>
@@ -1065,10 +1069,8 @@
                     answer.innerHTML += txt.charAt(i);
                 }
                 i++;
-                timeoutIds.push(setTimeout(typeWriter, 5, txt, i, q));
-            }
-            else {
                 hljs.highlightAll();
+                timeoutIds.push(setTimeout(typeWriter, 1, txt, i, q));
             }
         }
     }
