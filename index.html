@@ -301,7 +301,7 @@
                             Without any task-specific prompting or pre-defined reward templates, Eureka generates reward
                             functions that outperform expert human-engineered rewards on
                             <b>83%</b> of the tasks in a diverse suite of 29 open-sourced RL environments that include
-                            10 distinct robot morphologies, leading to an average normalized improvement of <b>54%</b>.
+                            10 distinct robot morphologies, leading to an average normalized improvement of <b>52%</b>.
                             The generality of Eureka enables a new type of reinforcement learning from human feedback
                             (RLHF), readily incorporating human oversight to in-context improve the quality and the
                             safety of the generated rewards.
@@ -340,11 +340,12 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Policies</span></h2>
+                        <h2 class="title is-3"><span class="dvima">Eureka Reward and Policies</span></h2>
                         <p style="font-size: 125%">
-                            We train policies on environments from IsaacGym (Isaac) and the Bidexterous Manipulation
-                            (Dexterity) benchmark. For each environment, Eureka performs 5 iterations with 16 samples
-                            per iteration, and we select the best policy overall. Their rollouts are visualized below.
+                            We train policies using Eureka rewards on environments from IsaacGym (Isaac) and the Bidexterous Manipulation
+                            (Dexterity) benchmark. In this demo, we visualize the unmodified best Eureka reward for each environment and the policy trained using this reward. 
+                            <!-- For each environment, Eureka performs 5 iterations with 16 samples -->
+                            <!-- per iteration, and we select the best policy overall. Their rollouts are visualized below. -->
                         </p>
                         <p style="font-size: 125%"></p>
                     </div>
