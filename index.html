@@ -347,13 +347,21 @@
                             <!-- For each environment, Eureka performs 5 iterations with 16 samples -->
                             <!-- per iteration, and we select the best policy overall. Their rollouts are visualized below. -->
                         </p>
-                        <p style="font-size: 125%"></p>
                     </div>
                 </div>
             </div>
             <br>
-            <div class="columns">
+            <div class="columns" style="align-items: end;">
                 <div class="column is-half">
+                    <p style="font-size: 1.5em">Pen Spinning</p>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>Quadcopter</b>, best Eureka reward:
+                        [sep]
+                        assets/reward_functions/quadcopter.txt' onclick="populateDemo(this);">
+                    </div>
+
+                    <br>
+                    <p style="font-size: 1.5em">Isaac</p>
                     <div class="col-md-4 col-sm-4 col-xs-4">
                         <img src="videos/sim/allegro_hand.png" width="18%" style="border-radius: 5px;" alt='<b>AllegroHand</b>, best Eureka reward:
                         [sep]
@@ -383,14 +391,14 @@
                         [sep]
                         assets/reward_functions/humanoid.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>Quadcopter</b>, best Eureka reward:
-                        [sep]
-                        assets/reward_functions/quadcopter.txt' onclick="populateDemo(this);">
-
                         <img src="videos/sim/shadow_hand.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHand</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand.txt' onclick="populateDemo(this);">
+                    </div>
 
+                    <br>
+                    <p style="font-size: 1.5em">Dexterity</p>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
                         <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandBlockStack</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_block_stack.txt' onclick="populateDemo(this);">
@@ -411,7 +419,7 @@
                         [sep]
                         assets/reward_functions/shadow_hand_catch_underarm.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorCloseInward</b>, best Eureka reward:
+                        <img src="videos/sim/bidex_door_close_inward.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorCloseInward</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_door_close_inward.txt' onclick="populateDemo(this);">
 
@@ -423,7 +431,7 @@
                         [sep]
                         assets/reward_functions/shadow_hand_door_open_inward.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorOpenOutward</b>, best Eureka reward:
+                        <img src="videos/sim/bidex_door_open_outward.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorOpenOutward</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_door_open_outward.txt' onclick="populateDemo(this);">
 
@@ -431,11 +439,11 @@
                         [sep]
                         assets/reward_functions/shadow_hand_grasp_and_place.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandKettle</b>, best Eureka reward:
+                        <img src="videos/sim/bidex_kettle.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandKettle</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_kettle.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandLiftUnderarm</b>, best Eureka reward:
+                        <img src="videos/sim/bidex_lift_undearm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandLiftUnderarm</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_lift_underarm.txt' onclick="populateDemo(this);">
 
@@ -443,7 +451,7 @@
                         [sep]
                         assets/reward_functions/shadow_hand_over.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandPen</b>, best Eureka reward:
+                        <img src="videos/sim/bidex_pen.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandPen</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_pen.txt' onclick="populateDemo(this);">
 
@@ -455,15 +463,15 @@
                         [sep]
                         assets/reward_functions/shadow_hand_reorientation.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandScissors</b>, best Eureka reward:
+                        <img src="videos/sim/bidex_scissors.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandScissors</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_scissors.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwingCup</b>, best Eureka reward:
+                        <img src="videos/sim/bidex_swing_cup.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwingCup</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_swing_cup.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/sim/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwitch</b>, best Eureka reward:
+                        <img src="videos/sim/bidex_switch.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwitch</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_switch.txt' onclick="populateDemo(this);">
 
@@ -473,7 +481,7 @@
 
                     </div>
                 </div>
-                <div class="row border rounded" style="padding-top:10px; padding-bottom:10px;">
+                <div class="row border rounded" style="padding-top:12px; padding-bottom:12px;">
                     <div class="col-md-6">
                         <video id="demo-video" style="border-radius: 5px;" autoplay loop muted
                             webkit-playsinline playsinline onclick="setAttribute('controls', 'true');">

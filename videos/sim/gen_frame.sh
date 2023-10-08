@@ -8,8 +8,9 @@ for file in "$input_folder"/*.mp4; do
 
     # Use ffmpeg to extract the last frame and save it as PNG
     # ffmpeg -i "$file" -vf "select=gte(n\, $(ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_frames -of csv=p=0 "$file"))" -vframes 1 "$output_folder/$filename.png"
-    ffmpeg -sseof -3 -i "$file" -update 1 -q:v 1 "$output_folder/$filename.png"
+    # ffmpeg -sseof -3 -i "$file" -update 1 -q:v 1 "$output_folder/$filename.png"
+    ffmpeg -i "$file" -vframes 1 "$filename.png"
 
 
-    echo "Extracted the last frame of $file"
+    echo "Extracted the first frame of $file"
 done
