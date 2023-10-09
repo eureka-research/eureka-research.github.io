@@ -74,29 +74,29 @@
                                 <a target="_blank" href="https://www.seas.upenn.edu/~jasonyma/">Yecheng
                                     Jason&#160;Ma</a><sup>1 2</sup>,
                                 <a target="_blank"
-                                    href="https://www.seas.upenn.edu/~wjhliang/">William&#160;Liang</a><sup>1</sup>,
+                                    href="https://www.seas.upenn.edu/~wjhliang/">William&#160;Liang</a><sup>2</sup>,
 
-                                <a target="_blank" href="https://guanzhi.me/">Guanzhi&#160;Wang</a><sup>2 3</sup>,
+                                <a target="_blank" href="https://guanzhi.me/">Guanzhi&#160;Wang</a><sup>1 3</sup>,
                                 <a target="_blank"
-                                    href="https://ai.stanford.edu/~dahuang/">De-An&#160;Huang</a><sup>2</sup>,
+                                    href="https://ai.stanford.edu/~dahuang/">De-An&#160;Huang</a><sup>1</sup>,
                                 <br>
                                 <a target="_blank"
-                                    href="https://obastani.github.io/">Osbert&#160;Bastani</a><sup>1</sup>,
+                                    href="https://obastani.github.io/">Osbert&#160;Bastani</a><sup>2</sup>,
                                 <a target="_blank"
-                                    href="https://www.seas.upenn.edu/~dineshj/">Dinesh&#160;Jayaraman</a><sup>1</sup>,
+                                    href="https://www.seas.upenn.edu/~dineshj/">Dinesh&#160;Jayaraman</a><sup>2</sup>,
 
-                                <a target="_blank" href="https://www.cs.utexas.edu/~yukez/">Yuke&#160;Zhu</a><sup>2
+                                <a target="_blank" href="https://www.cs.utexas.edu/~yukez/">Yuke&#160;Zhu</a><sup>1
                                     4</sup>,
-                                <a target="_blank" href="https://jimfan.me/">Linxi&#160;"Jim"&#160;Fan</a><sup>2</sup>
+                                <a target="_blank" href="https://jimfan.me/">Linxi&#160;"Jim"&#160;Fan</a><sup>1</sup>
                                 <a target="_blank"
-                                    href="http://tensorlab.cms.caltech.edu/users/anima/">Anima&#160;Anandkumar</a><sup>2
+                                    href="http://tensorlab.cms.caltech.edu/users/anima/">Anima&#160;Anandkumar</a><sup>1
                                     3</sup>,
                             </span>
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block"><sup>1</sup>UPenn; </span>
-                            <span class="author-block"><sup>2</sup>NVIDIA; </span>
+                            <span class="author-block"><sup>1</sup>NVIDIA; </span>
+                            <span class="author-block"><sup>2</sup>UPenn; </span>
                             <span class="author-block"><sup>3</sup>Caltech; </span>
                             <span class="author-block"><sup>4</sup>UT Austin</span>
                         </div>
@@ -173,8 +173,8 @@
         <div class="container is-max-desktop">
             <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
-                <video poster="" id="" autoplay controls muted loop width="60%" playbackRate=2.0 style="border-radius: 5px;">
-                    <source src="videos/gallery/pen_spin_center.mp4" type="video/mp4">
+                <video poster="" id="" autoplay controls muted loop width="100%" playbackRate=2.0 style="border-radius: 5px;">
+                    <source src="videos/eureka_zoomout.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -234,12 +234,12 @@
                         <img src="assets/images/eureka.png" class="interpolation-image" alt=""
                             style="display: block; margin-left: auto; margin-right: auto" />
                         <br>
-                        <span style="font-size: 110%"><b>Overview.</b> Eureka takes unmodified environment
+                        <span style="font-size: 125%"><b>Overview.</b> Eureka takes unmodified environment
                             source code
                             and language task description as context to
                             zero-shot generate executable reward functions from a coding LLM. Then, it iterates
                             between
-                            reward sampling,
+                            evolutionary reward search,
                             GPU-accelerated reward evaluation, and reward reflection to progressively improve
                             its reward
                             outputs.</span>
@@ -254,15 +254,12 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Eureka Reward and Policies</span></h2>
+                        <h2 class="title is-3"><span class="dvima">Eureka Rewards and Policies</span></h2>
                         <p style="font-size: 125%">
-                            We train policies using Eureka rewards on environments from IsaacGym (Isaac) and the
-                            Bidexterous Manipulation
-                            (Dexterity) benchmark. In this demo, we visualize the unmodified best Eureka reward
+                            In this demo, we visualize the unmodified best Eureka reward
                             for each
-                            environment and the policy trained using this reward.
-                            <!-- For each environment, Eureka performs 5 iterations with 16 samples -->
-                            <!-- per iteration, and we select the best policy overall. Their rollouts are visualized below. -->
+                            environment and the policy trained using this reward. Our environment suite spans 10 robots and 29 distinct tasks across two 
+                            open-sourced benchmarks, Isaac Gym (Isaac) and Bidexterous Manipulation (Dexterity).
                         </p>
                     </div>
                 </div>
@@ -270,127 +267,127 @@
             <br>
             <div class="columns" style="align-items: end;">
                 <div class="column is-half">
-                    <p style="font-size: 1.5em">Isaac</p>
+                    <p style="font-size: 1.5em"><b>Isaac</b></p>
                     <div class="col-md-4 col-sm-4 col-xs-4">
-                        <img src="videos/gallery/allegro_hand.png" width="18%" style="border-radius: 5px;" alt='<b>AllegroHand</b>, best Eureka reward:
+                        <img src="videos/task_final/allegro_hand.png" width="18%" style="border-radius: 5px;" alt='<b>AllegroHand</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/allegro_hand.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/ant.png" width="18%" style="border-radius: 5px;" alt='<b>Ant</b>, best Eureka reward:
+                        <img src="videos/task_final/ant.png" width="18%" style="border-radius: 5px;" alt='<b>Ant</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/ant.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/anymal.png" width="18%" style="border-radius: 5px;" alt='<b>Anymal</b>, best Eureka reward:
+                        <img src="videos/task_final/anymal.png" width="18%" style="border-radius: 5px;" alt='<b>Anymal</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/anymal.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>BallBalance</b>, best Eureka reward:
+                        <img src="videos/task_final/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>BallBalance</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/ball_balance.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>Cartpole</b>, best Eureka reward:
+                        <img src="videos/task_final/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>Cartpole</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/cartpole.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/franka_cabinet.png" width="18%" style="border-radius: 5px;" alt='<b>FrankaCabinet</b>, best Eureka reward:
+                        <img src="videos/task_final/franka_cabinet.png" width="18%" style="border-radius: 5px;" alt='<b>FrankaCabinet</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/franka_cabinet.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/humanoid.png" width="18%" style="border-radius: 5px;" alt='<b>Humanoid</b>, best Eureka reward:
+                        <img src="videos/task_final/humanoid.png" width="18%" style="border-radius: 5px;" alt='<b>Humanoid</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/humanoid.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>Quadcopter</b>, best Eureka reward:
+                        <img src="videos/task_final/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>Quadcopter</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/quadcopter.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/shadow_hand.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHand</b>, best Eureka reward:
+                        <img src="videos/task_final/shadow_hand.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHand</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand.txt' onclick="populateDemo(this);">
                     </div>
 
                     <br>
-                    <p style="font-size: 1.5em">Dexterity</p>
+                    <p style="font-size: 1.5em"><b>Dexterity</b></p>
                     <div class="col-md-4 col-sm-4 col-xs-4">
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandBlockStack</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_block_stacking.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandBlockStack</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_block_stack.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandBottleCap</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_bottle_cap.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandBottleCap</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_bottle_cap.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchAbreast</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_catch_abreast.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchAbreast</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_catch_abreast.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchOver2Underarm</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_catch_over2underarm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchOver2Underarm</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_catch_over_2_underarm.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchUnderarm</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_catch_underarm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandCatchUnderarm</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_catch_underarm.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/bidex_door_close_inward.png" width="18%" style="border-radius: 5px;"
+                        <img src="videos/task_final/bidex_door_close_inward.png" width="18%" style="border-radius: 5px;"
                             alt='<b>ShadowHandDoorCloseInward</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_door_close_inward.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorCloseOutward</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_door_close_outward.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorCloseOutward</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_door_close_outward.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorOpenInward</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_door_open_inward.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandDoorOpenInward</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_door_open_inward.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/bidex_door_open_outward.png" width="18%" style="border-radius: 5px;"
+                        <img src="videos/task_final/bidex_door_open_outward.png" width="18%" style="border-radius: 5px;"
                             alt='<b>ShadowHandDoorOpenOutward</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_door_open_outward.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandGraspAndPlace</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_grasp_and_place.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandGraspAndPlace</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_grasp_and_place.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/bidex_kettle.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandKettle</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_kettle.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandKettle</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_kettle.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/bidex_lift_undearm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandLiftUnderarm</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_lift_undearm.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandLiftUnderarm</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_lift_underarm.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandOver</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_over.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandOver</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_over.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/bidex_pen.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandPen</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_pen.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandPen</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_pen.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandPushBlock</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_push_block.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandPushBlock</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_push_block.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandReorientation</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_re_orientation.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandReorientation</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_reorientation.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/bidex_scissors.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandScissors</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_scissors.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandScissors</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_scissors.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/bidex_swing_cup.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwingCup</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_swing_cup.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwingCup</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_swing_cup.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/bidex_switch.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwitch</b>, best Eureka reward:
+                        <img src="videos/task_final/bidex_switch.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandSwitch</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_switch.txt' onclick="populateDemo(this);">
 
-                        <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandTwoCatchUnderarm</b>, best Eureka reward:
+                        <img src="videos/task_final/b.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandTwoCatchUnderarm</b>, best Eureka reward:
                         [sep]
                         assets/reward_functions/shadow_hand_two_catch_underarm.txt' onclick="populateDemo(this);">
 
@@ -420,7 +417,10 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Dexterous Pen Spinning</span></h2>
+                        <h2 class="title is-3"><span class="dvima">Eureka Pen Spinning Gallery</span></h2>
+                        <p style="font-size: 125%">
+                            Using Eureka rewards in a curriculum learning setting, we demonstrate for the first time a Shadow Hand capable of performing various pen spinning patterns.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -432,27 +432,27 @@
                     <div id="results-carousel" class="carousel results-carousel">
                         <div class="item">
                             <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/gallery/pen_spin_center.mp4" type="video/mp4">
+                                <source src="videos/pen_gallery/pen_spin_center.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="item">
                             <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/gallery/pen_spin_center.mp4" type="video/mp4">
+                                <source src="videos/pen_gallery/pen_spin_center.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="item">
                             <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/gallery/pen_spin_center.mp4" type="video/mp4">
+                                <source src="videos/pen_gallery/pen_spin_center.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="item">
                             <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/gallery/pen_spin_center.mp4" type="video/mp4">
+                                <source src="videos/pen_gallery/pen_spin_center.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="item">
                             <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0>
-                                <source src="videos/gallery/pen_spin_center.mp4" type="video/mp4">
+                                <source src="videos/pen_gallery/pen_spin_center.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -531,10 +531,9 @@
                         <img src="assets/images/eureka_bar_chart.png" class="interpolation-image" alt=""
                             style="display: block; margin-left: auto; margin-right: auto" />
                         <br>
-                        <span style="font-size: 110%">
-                            <span style="font-weight: bold">TODO</span> Eureka outperforms Human and L2R across
-                            all
-                            tasks. In particular, Eureka realizes much greater gains on high-dimensional
+                        <span style="font-size: 125%">
+                            <span style="font-weight: bold">Eureka can generate super human-level reward functions.</span> Across 29 tasks, Eureka rewards outperform expert human-written ones on 83% of them with an average normalized improvement of 52%.
+                             In particular, Eureka realizes much greater gains on high-dimensional
                             dexterity
                             environments.
                         </span>
@@ -545,38 +544,44 @@
                         <img src="assets/images/eureka_improvement.png" class="interpolation-image" alt=""
                             style="display: block; width: 60%; margin-left: auto; margin-right: auto" />
                         <br>
-                        <span style="font-size: 110%">
-                            <span style="font-weight: bold">TODO</span> Eureka progressively produces better
-                            rewards via
-                            in- context evolutionary reward search.
+                        <span style="font-size: 125%">
+                            <span style="font-weight: bold">Eureka evolutionay reward search enables consistent reward improvement over time.</span> Eureka progressively produces better
+                            rewards that eventually exceed human-level by combining large-scale reward search with detailed reward reflection feedback.
                         </span>
                         <br>
                         <br>
                         <br>
 
-                        <h3 class="title is-4"><span class="dvima">Comparison with Human Rewards</span></h3>
+                        <!-- <h3 class="title is-4"><span class="dvima">Comparison with Human Rewards</span></h3> -->
                         <br>
 
                         <img src="assets/images/isaac_eureka_correlation.png" class="interpolation-image" alt=""
                             style="display: block; width: 40%; margin-left: auto; margin-right: auto" />
                         <br>
-                        <span style="font-size: 110%">
-                            <span style="font-weight: bold">TODO</span> Eureka generates novel rewards.
+                        <span style="font-size: 125%">
+                            <span style="font-weight: bold">Eureka generates novel rewards.</span>  We 
+                            assess the novelty of Eureka rewards by computing the correlations between Eureka and human rewards on all Isaac tasks.
+                            As shown, Eureka mostly generates weakly correlated reward functions that outperform the human ones. In addition, we observe that 
+                            <b>the harder the task is, the less correlated the Eureka rewards.</b> In a few cases, Eureka rewards are even negatively correlated with human rewards while significantly 
+                            outperforming them. 
                         </span>
                         <br>
                         <br>
                         <br>
 
-                        <h3 class="title is-4"><span class="dvima">Curriculum Learning</span></h3>
+                        <h3 class="title is-4"><span class="dvima">Dexterous Pen Spinning via Curriculum Learning</span></h3>
+
                         <br>
 
                         <img src="assets/images/eureka_pen_spinning.png" class="interpolation-image" alt=""
                             style="display: block; width: 40%; margin-left: auto; margin-right: auto" />
                         <br>
-                        <span style="font-size: 110%">
-                            <span style="font-weight: bold">TODO</span> Eureka can be flexibly combined with
-                            curriculum
-                            learning to acquire complex dexterous skills.
+                        <span style="font-size: 125%">
+                            <span style="font-weight: bold"></span> The pen spinning task requires a Shadow Hand to continuously rotate a pen to achieve some pre-defined spinning patterns for 
+                            as many cycles as possible. We solve this task by (1) instructing Eureka to generate a reward function for re-orienting the pen to random target configurations,
+                            and then (2) fine-tuning this pre-trained policy using the Eureka reward to reach the desired sequence of pen-spinning configurations.
+                            As shown, Eureka fine-tuning quickly adapts the policy successfully spin the pen for many cycles in a row. In contrast, neither pre-trained or learning-from-scratch 
+                            policies can complete even a single cycle.
                         </span>
                         <br>
                         <br>
@@ -588,12 +593,11 @@
                         <img src="assets/images/bidex_reward_assistant.png" class="interpolation-image" alt=""
                             style="display: block; width: 80%; margin-left: auto; margin-right: auto" />
                         <br>
-                        <span style="font-size: 110%">
-                            <span style="font-weight: bold">TODO</span> Eureka effectively improves and benefits
-                            from
-                            human reward initialization.
+                        <span style="font-size: 125%">
+                            <span style="font-weight: bold">Eureka effectively improves and benefits from human reward initialization.</span> 
+                        We study whether starting with a human reward function initialization, a common scenario in real-world RL applications, is advantageous for Eureka. 
+                        As shown, regardless of the quality of the human rewards, Eureka improves and benefits from human rewards as Eureka (Human Init.) is uniformly better than both Eureka and Human on all tasks.
                         </span>
-                        <br>
                         <br>
                         <br>
 
@@ -909,18 +913,18 @@
 
             <div class="rows"> -->
     <!-- <div class="col-md-4 col-sm-4 col-xs-4">
-                <img src="videos/gallery/bowl2.png" width="100%"
+                <img src="videos/task_final/bowl2.png" width="100%"
                     alt=" User instruction: Flp the bowl. [sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'bowl')\\set_obj_orientation_reward('bowl', np.deg2rad(180))\\execute_plan(2)"
                     onclick="populateDemo(this);">
             </div> -->
     <!-- <div class="col-md-4 col-sm-4 col-xs-4">
-                    <img src="videos/gallery/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandTwoCatchUnderarm</b>, best Eureka reward:
+                    <img src="videos/task_final/pen_spinning.png" width="18%" style="border-radius: 5px;" alt='<b>ShadowHandTwoCatchUnderarm</b>, best Eureka reward:
                     [sep]
                     assets/reward_functions/shadow_hand_two_catch_underarm.txt' onclick="populateDemo(this);">
 
                 </div> -->
     <!-- <div class="col-md-4 col-sm-4 col-xs-4">
-                <img src="videos/gallery/upright_box.png" width="100%"
+                <img src="videos/task_final/upright_box.png" width="100%"
                     alt="User instruction: Make the box upright.[sep]import numpy as np\\reset_reward()  # This is a new task so reset reward; otherwise we don't need it\\set_l2_distance_reward('palm', 'box')\\set_obj_orientation_reward('box', np.deg2rad(90))\\execute_plan()"
                     onclick="populateDemo(this);">
             </div> -->
