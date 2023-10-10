@@ -1,15 +1,7 @@
-Iteration 2: Human Reward Reflection:
-The learned behavior now looks like duck walk; 
-the legs are indeed alternating but the torso is very low. 
-Could you improve the reward function for upright running?
-
-#########################################################################
-
-Iteration 3: Eureka Output:
-To encourage a more upright running posture,
-  we can increase the reward for maintaining an upright torso and penalize the agent more heavily for having a low torso position.
-   We can also add a reward for maintaining a certain height,
-   which would discourage the "duck walk" behavior.
+To encourage a more upright running posture, we can increase the reward for maintaining
+an upright torso and penalize the agent more heavily for having a low torso position.
+We can also add a reward for maintaining a certain height, which would discourage the
+"duck walk" behavior.
 
 Here is a revised reward function:
 
@@ -59,4 +51,7 @@ def compute_humanoid_reward(obs_buf, reset_buf, progress_buf, actions, up_weight
     return reward, reset
 ```
 
-This reward function encourages the agent to move forward as fast as possible, while also encouraging efficient movement, alternating leg movements, maintaining an upright torso, maintaining a certain height, and penalizing the agent for jumping, having a low torso position, or reaching joint limits.
+This reward function encourages the agent to move forward as fast as possible, while also
+encouraging efficient movement, alternating leg movements, maintaining an upright torso,
+maintaining a certain height, and penalizing the agent for jumping, having a low torso position,
+or reaching joint limits.

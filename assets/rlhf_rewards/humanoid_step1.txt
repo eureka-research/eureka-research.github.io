@@ -1,12 +1,7 @@
-Iteration 1: Human Reward Reflection:
-The learned behavior resembles forward squat jump; 
-please revise the reward function so that the behavior resembles forward running. 
-
-#########################################################################
-
-Iteration 2: Eureka Output:
- To encourage a running behavior, we can modify the reward function to reward the agent for alternating leg movements and penalize for jumping (both feet off the ground).
-  We can also reward the agent for maintaining a relatively upright torso to resemble a running posture.
+To encourage a running behavior, we can modify the reward function to reward the agent
+for alternating leg movements and penalize for jumping (both feet off the ground).
+We can also reward the agent for maintaining a relatively upright torso to resemble a
+running posture.
 
 Here is a revised reward function:
 
@@ -48,4 +43,6 @@ def compute_humanoid_reward(obs_buf, reset_buf, progress_buf, actions, up_weight
     return reward, reset
 ```
 
-This reward function encourages the agent to move forward as fast as possible, while also encouraging efficient movement, alternating leg movements, maintaining an upright torso, and penalizing the agent for jumping or reaching joint limits.
+This reward function encourages the agent to move forward as fast as possible, while also
+encouraging efficient movement, alternating leg movements, maintaining an upright torso, and
+penalizing the agent for jumping or reaching joint limits.
