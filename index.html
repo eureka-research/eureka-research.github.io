@@ -231,29 +231,6 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <img src="assets/images/eureka.png" class="interpolation-image" alt=""
-                            style="display: block; margin-left: auto; margin-right: auto" />
-                        <br>
-                        <span style="font-size: 125%"><b>Overview.</b> Eureka takes unmodified environment
-                            source code
-                            and language task description as context to
-                            zero-shot generate executable reward functions from a coding LLM. Then, it iterates
-                            between
-                            evolutionary reward search,
-                            GPU-accelerated reward evaluation, and reward reflection to progressively improve
-                            its reward
-                            outputs.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container is-max-widescreen">
-            <div class="rows">
-                <div class="rows is-centered ">
-                    <div class="row is-full-width">
                         <h2 class="title is-3"><span class="dvima">Eureka Rewards and Policies</span></h2>
                         <p style="font-size: 125%">
                             In this demo, we visualize the unmodified best Eureka reward
@@ -418,7 +395,7 @@
                     <div class="row is-full-width">
                         <h2 class="title is-3"><span class="dvima">Eureka Pen Spinning Gallery</span></h2>
                         <p style="font-size: 125%">
-                            Using Eureka rewards in a curriculum learning setting, we demonstrate for the first time a Shadow Hand capable of performing various pen spinning patterns.
+                            Combining Eureka with curriculum learning, we demonstrate for the first time a Shadow Hand performing various pen spinning tricks.
                         </p>
                     </div>
                 </div>
@@ -476,30 +453,60 @@
     </section>
 
 
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Eureka Components</span></h2>
+
+                        <img src="assets/images/eureka.png" class="interpolation-image" alt=""
+                            style="display: block; margin-left: auto; margin-right: auto" />
+                        <br>
+                        <span style="font-size: 125%"><b>Overview.</b> Eureka takes unmodified environment
+                            source code
+                            and language task description as context to
+                            zero-shot generate executable reward functions from a coding LLM. Then, it iterates
+                            between
+                            evolutionary reward search,
+                            GPU-accelerated reward evaluation, and reward reflection to progressively improve
+                            its reward
+                            outputs.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="section">
         <div class="container is-max-widescreen">
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Iterative Reward Generation</span></h2>
-                        <!-- <video poster="" autoplay controls muted loop height="100%">
-                            <source src="assets/videos/vima_arch_animation.mp4" type="video/mp4">
-                        </video> -->
-                        <img src="assets/images/reward_diff.png" class="interpolation-image" alt=""
-                            style="display: block; margin-left: auto; margin-right: auto; max-width: 60%;" />
-                        <br>
+                        <video poster="" id="" autoplay controls muted loop wdith="10%" height="100%" playbackRate=2.0>
+                            <source src="videos/shadow_hand_multi.mp4" type="video/mp4">
+                        </video>
                         <span style="font-size: 125%">
-                            <span style="font-weight: bold">Eureka Reward Generation.</span> Eureka can
-                            zero-shot
-                            generate executable rewards and then flexibly improve them with many distinct
+                        <span style="font-weight: bold">Rapid Reward Evaluation via Massively Parallel RL.</span> 
+                        Leveraging state-of-the-art GPU-accelerated simulation in NVIDIA Isaac Gym, Eureka is able to quickly evaluate 
+                        the quality of a large batch of reward candidates, enabling scalable search in the reward function space.
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+                        <img src="assets/images/reward_diff.png" class="interpolation-image" alt=""
+                        style="display: block; margin-left: auto; margin-right: auto; max-width: 80%;" />
+                        <span style="font-size: 125%">
+                            <span style="font-weight: bold">Eureka Reward Reflection.</span> After reward evaluation, 
+                            Eureka constructs reward reflection that summarizes the key statistics of the RL trainingEureka can
+                            Eureka instructs the backbone LLM (GPT-4) to flexibly improve the reward functions with many distinct
                             types of free-form modification, such as (1) changing the hyperparameter of existing
                             reward
                             components, (2)
                             changing the functional form of existing reward components, and (3) introducing new
                             reward
                             components.</span>
-                    </div>
+                        </div>
                 </div>
 
             </div>
