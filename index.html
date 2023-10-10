@@ -601,7 +601,7 @@
                         <br>
                         <br>
 
-                        <h3 class="title is-4"><span class="dvima">Eureka from Human Feedback</span></h3>
+                        <h3 class="title is-3"><span class="dvima">Eureka from Human Feedback</span></h3>
                         <br>
 
                         <img src="assets/images/bidex_reward_assistant.png" class="interpolation-image" alt=""
@@ -619,9 +619,10 @@
                             style="display: block; width: 100%; margin-left: auto; margin-right: auto" />
                         <br>
                         <span style="font-size: 125%">
-                            <span style="font-weight: bold">TODO</span> Eureka can incorporate human reward
-                            reflection
-                            to modify rewards that induce safer and more human-aligned behavior.
+                            <span style="font-weight: bold">Eureka enables In-Context Reinforcement Learning from Human Feedback (RLHF).</span> Eureka can incorporate human feedback to modify its rewards so that they progressively induce safer and more human-aligned agent behavior. 
+                            In this example, we show how Eureka can teach a Humanoid how to run upright from a handful of human feedback, which replaces the previous automated reward reflection.
+                             The final learned behavior (Iteration 5) is more preferred by human users by a wide margin than 
+                            the original Eureka-learned Humanoid running gait. 
                         </span>
                         <br>
                         <br>
@@ -636,12 +637,12 @@
         <div class="container is-max-widescreen">
             <div class="rows">
                 <div class="rows is-centered ">
-                    <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Eureka RLHF</span></h2>
+                    <!-- <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvima">Eureka enables In-Context Reinforcement Learning from Human Feedback (RLHF)</span></h2>
                         <p style="font-size: 125%">
                             Lorem ipsum TODO
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <br>
@@ -655,28 +656,28 @@
                         <img src="videos/humanoid_rlhf/humanoid-step1.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 2</b>, Human feedback: <br>
                         <span style="font-size: 0.8em; line-height: 30px;">The learned behavior resembles forward squat jump; 
                         please revise the reward function so that the behavior resembles forward running.</span><br><br>
-                        <b>Iteration 2</b>, Best Eureka reward:
+                        <b>Iteration 2</b>, Eureka reward:
                         [sep]
                         assets/rlhf_rewards/humanoid_step1.txt' onclick="populateDemo(this, 2);">
 
-                        <img src="videos/humanoid_rlhf/humanoid-step2.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 2</b>, Human feedback: <br>
+                        <img src="videos/humanoid_rlhf/humanoid-step2.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 3</b>, Human feedback: <br>
                         <span style="font-size: 0.8em; line-height: 30px;">The learned behavior now looks like duck walk; 
                             the legs are indeed alternating but the torso is very low. 
                             Could you improve the reward function for upright running?</span><br><br>
-                        <b>Iteration 2</b>, Best Eureka reward:
+                        <b>Iteration 3</b>, Eureka reward:
                         [sep]
                         assets/rlhf_rewards/humanoid_step2.txt' onclick="populateDemo(this, 2);">
 
-                        <img src="videos/humanoid_rlhf/humanoid-step3.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 2</b>, Human feedback: <br>
+                        <img src="videos/humanoid_rlhf/humanoid-step3.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 4</b>, Human feedback: <br>
                         <span style="font-size: 0.8em; line-height: 30px;">The learned behavior has the robot hopping on one of its foot in order to move forward.
                             Please revise the reward function to encourage upright running behavior.</span><br><br>
-                        <b>Iteration 2</b>, Best Eureka reward:
+                        <b>Iteration 4</b>, Eureka reward:
                         [sep]
                         assets/rlhf_rewards/humanoid_step3.txt' onclick="populateDemo(this, 2);">
 
-                        <img src="videos/humanoid_rlhf/humanoid-step4.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 2</b>, Human feedback: <br>
+                        <img src="videos/humanoid_rlhf/humanoid-step4.png" width="40%" style="border-radius: 5px;" alt='<b>Iteration 5</b>, Human feedback: <br>
                         <span style="font-size: 0.8em; line-height: 30px;">This reward function removed the penalty for low torse position that you added last time; could you just add it back in? </span><br><br>
-                        <b>Iteration 2</b>, Best Eureka reward:
+                        <b>Iteration 5</b>, Eureka reward:
                         [sep]
                         assets/rlhf_rewards/humanoid_step4.txt' onclick="populateDemo(this, 2);">
 
