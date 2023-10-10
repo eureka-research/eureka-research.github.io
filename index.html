@@ -594,9 +594,25 @@
 
                         <br>
 
-                        <img src="assets/images/eureka_pen_spinning.png" class="interpolation-image" alt=""
-                            style="display: block; width: 40%; margin-left: auto; margin-right: auto" />
-                        <br>
+                        <div class="columns">
+                            <div class="column">
+                                <img src="assets/images/eureka_pen_spinning.png" class="interpolation-image" alt="" />
+                                    <!-- style="display: block; width: 40%; margin-left: auto; margin-right: auto" /> -->
+                                <br>
+                            </div>
+                            <div class="column has-text-centered">
+                                <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                                    <source src="videos/task_final/shadow_hand.mp4" type="video/mp4">
+                                </video>
+                                <p style="font-size: 110%">Pretrained Pen Reorientation</p>
+                            </div>
+                            <div class="column has-text-centered">
+                                <video poster="" id="" autoplay controls muted loop height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                                    <source src="videos/pen_gallery/pen_spin_center.mp4" type="video/mp4">
+                                </video>
+                                <p style="font-size: 110%">Finetuned Pen Spinning</p>
+                            </div>
+                        </div>
                         <span style="font-size: 125%">
                             <span style="font-weight: bold"></span> The pen spinning task requires a Shadow Hand to continuously rotate a pen to achieve some pre-defined spinning patterns for 
                             as many cycles as possible. We solve this task by (1) instructing Eureka to generate a reward function for re-orienting the pen to random target configurations,
@@ -642,17 +658,6 @@
 
     <section class="section">
         <div class="container is-max-widescreen">
-            <div class="rows">
-                <div class="rows is-centered ">
-                    <!-- <div class="row is-full-width">
-                        <h2 class="title is-3"><span class="dvima">Eureka enables In-Context Reinforcement Learning from Human Feedback (RLHF)</span></h2>
-                        <p style="font-size: 125%">
-                            Lorem ipsum TODO
-                        </p>
-                    </div> -->
-                </div>
-            </div>
-            <br>
             <div class="columns" style="align-items: end;">
                 <div class="column is-half">
                     <div class="col-md-4 col-sm-4 col-xs-4">
