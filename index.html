@@ -126,7 +126,7 @@
                                         <span class="icon">
                                             <i class="ai ai-arxiv"></i>
                                         </span>
-                                        <span>arXiv TODO</span>
+                                        <span>arXiv</span>
                                     </a>
                                 </span>
 
@@ -136,14 +136,14 @@
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
                                         </span>
-                                        <span>PDF TODO</span>
+                                        <span>PDF</span>
                                     </a>
-                                    <a target="_blank" href="https://github.com/vimalabs/VIMA"
+                                    <a target="_blank" href="https://github.com/eureka-research/Eureka"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
-                                        <span>Code TODO</span>
+                                        <span>Code</span>
                                     </a>
                                     <!-- <a target="_blank" href="https://github.com/vimalabs/VIMA#pretrained-models"
                                         class="external-link button is-normal is-rounded is-dark">
@@ -403,6 +403,7 @@
                         <h2 class="title is-3"><span class="dvima">Eureka Pen Spinning Gallery</span></h2>
                         <p style="font-size: 125%">
                             Combining Eureka with curriculum learning, we demonstrate for the first time a Shadow Hand performing various pen spinning tricks.
+                            Our main pen spinning axis (center video in the grid) is perpendicular to the palm of the hand, thus defining the spin as parallel to the palm—similar to the ''finger pass'' trick. In addition, we also train several other variations with different axes where each xyz component is chosen from [-1,0,1], resulting in numerous unique patterns.
                         </p>
                     </div>
                 </div>
@@ -410,7 +411,16 @@
         </div>
         <!-- <div class="hero is-light is-small"> -->
         <div>
+
             <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered has-text-centered">
+                        <video poster="" id="" autoplay controls muted loop width="80%" playbackRate=2.0 style="border-radius: 5px;">
+                            <source src="videos/pen_styles.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <br>
                 <div class="container">
                     <div id="results-carousel" class="carousel results-carousel">
                         <div class="item">
@@ -475,9 +485,11 @@
                         <!-- <img src="assets/images/eureka.png" class="interpolation-image" alt=""
                             style="display: block; margin-left: auto; margin-right: auto" />
                         <br> -->
-                        <video poster="" id="" autoplay controls muted width="100%" playbackRate=2.0 style="border-radius: 5px;">
+                        <div class="columns is-centered has-text-centered">
+                        <video poster="" id="" autoplay controls muted width="90%" playbackRate=2.0 style="border-radius: 5px;">
                             <source src="assets/images/eureka.mp4" type="video/mp4">
                         </video>
+                        </div>
                         <span style="font-size: 125%"><b>Overview.</b> Eureka takes unmodified environment
                             source code
                             and language task description as context to
@@ -498,9 +510,11 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
-                        <video poster="" id="" autoplay controls muted loop wdith="10%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                        <div class="columns is-centered has-text-centered">
+                        <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
                             <source src="videos/shadow_hand_multi.mp4" type="video/mp4">
                         </video>
+                        </div>
                         <span style="font-size: 125%">
                         <span style="font-weight: bold">Rapid Reward Evaluation via Massively Parallel RL.</span> 
                         Leveraging state-of-the-art GPU-accelerated simulation in NVIDIA Isaac Gym, Eureka is able to quickly evaluate 
