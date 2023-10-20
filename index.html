@@ -105,7 +105,7 @@
                             <div class="publication-links">
                                 <!-- TODO REPLACE ALL LINKS -->
                                 <span class="link-block">
-                                    <a target="_blank" href="https://arxiv.org/abs/2210.03094"
+                                    <a target="_blank" href="https://arxiv.org/abs/2310.12931"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="ai ai-arxiv"></i>
@@ -444,7 +444,8 @@
                             <source src="assets/images/eureka.mp4" type="video/mp4">
                         </video>
                         </div>
-                        <span style="font-size: 125%"><b>Overview.</b> Eureka takes unmodified environment
+                        <span style="font-size: 125%"><b>Overview.</b> Eureka achieves human-level reward design by in-context <b>evolving</b> reward functions
+                            More specifically, Eureka first takes unmodified environment
                             source code
                             and language task description as context to
                             zero-shot generate executable reward functions from a coding LLM. Then, it iterates
@@ -464,6 +465,20 @@
             <div class="rows">
                 <div class="rows is-centered ">
                     <div class="row is-full-width">
+
+                        <div class="columns is-centered has-text-centered">
+                            <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                                <source src="videos/eureka_env_context.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <span style="font-size: 125%">
+                        <span style="font-weight: bold">Environment as Context.</span> 
+                        By using the raw environment code as context, Eureka can zero-shot generate plausible reward programs, without any task-specific prompt engineering. This allows Eureka to be a <b>generalist</b> reward designer,
+                         readily producing reward functions on first try for all our environments.                        </span>
+                        <br>
+                        <br>
+                        <br>
+
                         <div class="columns is-centered has-text-centered">
                         <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
                             <source src="videos/shadow_hand_multi.mp4" type="video/mp4">
@@ -477,8 +492,14 @@
                         <br>
                         <br>
                         <br>
-                        <img src="assets/images/reward_diff.png" class="interpolation-image" alt=""
-                        style="display: block; margin-left: auto; margin-right: auto; max-width: 80%;" />
+
+                        <div class="columns is-centered has-text-centered">
+                        <video poster="" id="" autoplay controls muted loop width="70%" height="100%" playbackRate=2.0 style="border-radius: 5px;">
+                            <source src="videos/eureka_reward_reflection.mp4" type="video/mp4">
+                        </video>
+                        </div>
+                        <!-- <img src="assets/images/reward_diff.png" class="interpolation-image" alt="" -->
+                        <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 80%;" /> -->
                         <span style="font-size: 125%">
                             <span style="font-weight: bold">Eureka Reward Reflection.</span> After reward evaluation, 
                             Eureka constructs reward reflection that summarizes the key statistics of the RL training. Then, Eureka uses this reward reflection 
@@ -611,7 +632,7 @@
                         <br>
 
                         <img src="assets/images/bidex_reward_assistant.png" class="interpolation-image" alt=""
-                            style="display: block; width: 80%; margin-left: auto; margin-right: auto" />
+                            style="display: block; width: 70%; margin-left: auto; margin-right: auto" />
                         <br>
                         <span style="font-size: 125%">
                             <span style="font-weight: bold">Eureka effectively improves and benefits from human reward initialization.</span> 
